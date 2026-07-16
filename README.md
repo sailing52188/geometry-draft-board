@@ -1,67 +1,117 @@
 # Geometry Draft Board
 
-面向初中和高中课堂的轻量几何草稿板。它保留了 CAD 式的便利性，但尽量去掉复杂工程化操作，重点服务学生和老师的课堂草图、几何辅助作图、函数图像绘制和 AI 交互讲解。
+Lightweight geometry sketch software for middle-school and high-school classrooms.
 
-在线体验：`https://sailing52188.github.io/geometry-draft-board/`
+一个面向初中和高中数学课堂的轻量几何草稿板。它保留了 CAD 式的便利性，但尽量去掉复杂工程化操作，重点服务学生和老师的课堂草图、几何辅助作图、函数图像绘制和 AI 交互讲解。
 
-仓库地址：`https://github.com/sailing52188/geometry-draft-board`
+Online demo: `https://sailing52188.github.io/geometry-draft-board/`
 
-离线版只需要一个浏览器即可运行。
+Repository: `https://github.com/sailing52188/geometry-draft-board`
 
-## 主要能力
+Current version: `v1.0.0`
 
-- 可见且分类陈列的绘图命令，核心工具不隐藏。
-- 更适合中学数学的几何作图：线段、射线、折线、多边形、三角形、直角三角形、矩形、圆、圆弧、标注。
-- 坐标系与函数图像：直线、二次函数、正弦、余弦、椭圆、双曲线。
-- 函数解析式展示与交点坐标计算。
-- 吸附增强：端点、交点、坐标轴、整数刻度、函数曲线、平行/垂直等关系提示。
-- 精确定点：可直接输入坐标生成点，再继续完成直线、折线、多边形等绘制。
-- 课堂友好的快捷键：兼容 macOS `Cmd` 与 Windows `Ctrl` 常用组合键。
-- iPad 触控优化：较大的点击区域与适配后的控制面板。
-- AI 助手：支持根据文字描述画图、分步解题、基于画布做几何分析。
+## Screenshots
 
-## 快速开始
+### Desktop Workspace
 
-### 直接打开
+![Desktop workspace](docs/screenshots/desktop-overview.png)
 
-双击 `index.html`，或拖入浏览器即可使用。
+### AI Assistant Panel
 
-### 本地预览
+![AI assistant panel](docs/screenshots/desktop-ai-panel.png)
+
+### iPad Layout
+
+![iPad layout](docs/screenshots/ipad-layout.png)
+
+## Why This Project
+
+### 中文
+
+- 不追求 AutoCAD 的完整度，追求课堂草稿的效率。
+- 核心绘图命令尽量可见，减少藏在二级菜单里的操作。
+- 优先覆盖中学数学高频图形、函数与辅助构造。
+- 让 AI 和画布联通，但不把基础几何绘图能力绑死在 AI 上。
+
+### English
+
+- Built for speed in teaching and learning, not for full CAD complexity.
+- Keeps core drawing actions visible instead of hiding them behind deep menus.
+- Focuses on common classroom geometry, function graphs, and guided constructions.
+- Connects AI with the canvas without making the core drawing workflow depend on AI.
+
+## Main Features
+
+### 中文
+
+- 顶部和侧边分类命令栏，核心工具不隐藏。
+- 几何工具：线段、射线、折线、多边形、三角形、直角三角形、矩形、圆、圆弧、角标、尺寸标注。
+- 坐标与函数：直线、二次函数、正弦、余弦、椭圆、双曲线。
+- 方程与交点：可显示函数解析式，自动计算交点坐标。
+- 智能吸附：端点、交点、坐标轴、整数刻度、函数曲线、平行、垂直、中点等。
+- 精确定点：可通过输入 `(x, y)` 进行坐标定点。
+- 多端交互：兼容 macOS `Cmd`、Windows `Ctrl` 快捷键和 iPad 触控。
+- AI 助手：支持文字画图、几何解题、看图分析。
+
+### English
+
+- Categorized top and side command rails with always-visible core tools.
+- Geometry tools for lines, rays, polygons, triangles, right triangles, rectangles, circles, arcs, angle marks, and dimensions.
+- Coordinate and graph support for lines, quadratics, sine, cosine, ellipses, and hyperbolas.
+- Equation display and local intersection solving.
+- Smart snapping for endpoints, intersections, axes, integer ticks, function curves, and geometric relations.
+- Exact coordinate point entry for precise classroom constructions.
+- macOS, Windows, and iPad-friendly interaction model.
+- AI assistant for draw-from-text, step-by-step solving, and canvas-aware analysis.
+
+## Quick Start
+
+### Open Directly
+
+Double-click `index.html` or drag it into any modern browser.
+
+双击 `index.html`，或直接拖入现代浏览器即可运行。
+
+### Run Locally
 
 ```bash
+npm install
 npm test
 npm run check:syntax
 npm run serve
 ```
 
-然后打开 `http://127.0.0.1:8765/`。
+Then open `http://127.0.0.1:8765/`.
 
-## 项目结构
+## Releases And Downloads
 
-- `index.html`：单文件应用，包含 UI、Canvas 渲染与交互逻辑。
-- `tests/geometry_ux_regression_test.js`：几何与 UX 静态回归测试。
-- `scripts/check-syntax.js`：检查 `index.html` 内嵌脚本语法。
-- `docs/feature-spec.md`：这轮中学数学绘图增强的功能说明。
+- Source code download: GitHub repository `Code` menu
+- Tagged release download: GitHub `Releases`
+- Local packaged archive: release asset `geometry-draft-board-v1.0.0.zip`
 
-## AI 使用说明
+## AI Key Storage
 
-- AI 功能默认对接 DeepSeek 接口。
-- API Key 由用户在浏览器中自行输入。
-- Key 仅保存在当前浏览器的 `localStorage`，不会随仓库上传。
-- 如果不配置 Key，几何草稿和函数绘图功能仍可独立使用。
+- The AI integration uses DeepSeek by default.
+- The API key is entered manually by the user.
+- The key is only stored in the current browser's `localStorage`.
+- Sharing the project files or the GitHub repository does not share your real key.
+- If no key is configured, the non-AI geometry and graphing features still work.
 
-## 适用场景
+## Project Structure
 
-- 老师课堂板书前快速构图
-- 学生几何题草图、辅助线和函数草稿
-- 在坐标系中观察图形关系、交点和解析式
-- 用 AI 辅助解释图形与分步讲题
+- `index.html`: single-file application with UI, canvas rendering, and interactions
+- `tests/geometry_ux_regression_test.js`: regression tests for geometry and UX behavior
+- `scripts/check-syntax.js`: embedded script syntax checker
+- `scripts/capture-screenshots.mjs`: reproducible screenshot generator
+- `docs/feature-spec.md`: feature specification for the classroom drawing expansion
+- `CHANGELOG.md`: public release history
 
-## 开发命令
+## Development Commands
 
-- `npm test`：运行回归测试
-- `npm run check:syntax`：校验内嵌脚本语法
-- `npm run serve`：本地启动静态预览
+- `npm test`: run regression tests
+- `npm run check:syntax`: validate the embedded script
+- `npm run capture:screenshots`: regenerate README screenshots
+- `npm run serve`: start a local static server
 
 ## License
 
