@@ -1,0 +1,11 @@
+{
+  "name": "geometry-draft-board",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lightweight geometry sketch board for middle-school and high-school classrooms.",
+  "scripts": {
+    "test": "node --test tests/geometry_ux_regression_test.js",
+    "check:syntax": "node scripts/check-syntax.js",
+    "serve": "python3 -m http.server 8765"
+  }
+}
