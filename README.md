@@ -2,7 +2,11 @@
 
 面向初中和高中课堂的轻量几何草稿板。它保留了 CAD 式的便利性，但尽量去掉复杂工程化操作，重点服务学生和老师的课堂草图、几何辅助作图、函数图像绘制和 AI 交互讲解。
 
-在线版发布后可直接通过 GitHub Pages 打开，离线版只需要一个浏览器即可运行。
+在线体验：`https://sailing52188.github.io/geometry-draft-board/`
+
+仓库地址：`https://github.com/sailing52188/geometry-draft-board`
+
+离线版只需要一个浏览器即可运行。
 
 ## 主要能力
 
